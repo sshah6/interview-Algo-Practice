@@ -25,4 +25,4 @@ function cleanStrings(str){
 console.log(anagrams("!hello", "!ollhe"));
 
 
-// module.exports = anagrams;
+module.exports = anagrams;
