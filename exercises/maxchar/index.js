@@ -22,7 +22,7 @@ function maxChar(str) {
     }
     return maxChar;
 }
-console.log(maxChar("apple"));
-console.log(maxChar("tthe highest mount"));
+console.log(maxChar("ab1c1d1e1f1g1"));
+console.log(maxChar("abcdefghijklmnaaaaa"));
 
-// module.exports = maxChar;
+module.exports = maxChar;
