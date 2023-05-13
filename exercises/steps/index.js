@@ -17,20 +17,41 @@
 //       '### '
 //       '####'
 
-function steps(n) {
-  for (let row = 0; row < n; row++) {
-    let stair = ''
-    for (let column = 0; column < n; column++) {
-      if (column <= row) {
-        stair += '#'
-      } else {
-        stair += ' '
-      }
+// function steps(n) {
+//   for (let row = 0; row < n; row++) {
+//     let stair = ''
+//     for (let column = 0; column < n; column++) {
+//       if (column <= row) {
+//         stair += '#'
+//       } else {
+//         stair += ' '
+//       }
+//     }
+//     console.log("'" + stair + "'")
+//   }
+// }
+// steps(4);
+
+//==========> Or Recursion
+
+function steps(n, row =0, stair = ''){
+
+    if(n === row){
+        return;
     }
-    console.log("'" + stair + "'")
-  }
+    if(n === stair.length){
+        console.log("'" + stair + "'");
+        return steps(n, row + 1, '');
+    }
+    if(stair.length <= row){
+        stair +='#';
+    }else{
+        stair += ' ';
+    }
+    return steps(n, row, stair) + "'";
 }
 
-steps(4);
+steps(5, 0, '');
 
-module.exports = steps;
+
+// module.exports = steps;
