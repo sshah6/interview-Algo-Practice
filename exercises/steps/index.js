@@ -33,4 +33,4 @@ function steps(n) {
 
 steps(4);
 
-// module.exports = steps;
+module.exports = steps;
